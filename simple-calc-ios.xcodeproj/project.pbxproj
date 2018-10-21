@@ -14,6 +14,7 @@
 		58B1C4D12175A8CB00705180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B1C4CF2175A8CB00705180 /* LaunchScreen.storyboard */; };
 		58B1C4DC2175A8CB00705180 /* simple_calc_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B1C4DB2175A8CB00705180 /* simple_calc_iosTests.swift */; };
 		58B1C4E72175A8CB00705180 /* simple_calc_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B1C4E62175A8CB00705180 /* simple_calc_iosUITests.swift */; };
+		58D940A8217C770000541D50 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D940A7217C770000541D50 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		58B1C4E22175A8CB00705180 /* simple-calc-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "simple-calc-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B1C4E62175A8CB00705180 /* simple_calc_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simple_calc_iosUITests.swift; sourceTree = "<group>"; };
 		58B1C4E82175A8CB00705180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D940A7217C770000541D50 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		58B1C4BA2175A8C900705180 = {
 			isa = PBXGroup;
 			children = (
+				58D940A7217C770000541D50 /* HistoryView.swift */,
 				58B1C4C52175A8C900705180 /* simple-calc-ios */,
 				58B1C4DA2175A8CB00705180 /* simple-calc-iosTests */,
 				58B1C4E52175A8CB00705180 /* simple-calc-iosUITests */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58B1C4C92175A8C900705180 /* ViewController.swift in Sources */,
+				58D940A8217C770000541D50 /* HistoryView.swift in Sources */,
 				58B1C4C72175A8C900705180 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
