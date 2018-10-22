@@ -152,9 +152,9 @@ class ViewController: UIViewController {
    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var historyView: HistoryView = segue.destination as! HistoryView
+        let historyView: HistoryView = segue.destination as! HistoryView
         
-        historyView.revcevedmath = String(storeEquation)
+        historyView.revcevedmath = storeEquation.description
     }
     
     override func viewDidLoad() {

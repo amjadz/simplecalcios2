@@ -18,10 +18,6 @@ class HistoryView: UIViewController {
     
     var revcevedmath : String = ""
     
-    @IBOutlet weak var hsitroy2: UILabel!
-    
-    @IBOutlet weak var history1: UILabel!
-    
     
     
     override func viewDidLoad() {
