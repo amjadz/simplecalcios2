@@ -250,7 +250,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="76G-yD-TVR" kind="show" id="3rC-jY-D3y"/>
+                                    <segue destination="LmV-Ak-jWv" kind="show" id="oPk-N4-4Ma"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -349,34 +349,67 @@
             </objects>
             <point key="canvasLocation" x="765.60000000000002" y="-26.53673163418291"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="sET-Ph-kEm">
+        <!--History View-->
+        <scene sceneID="V9e-a4-3ui">
             <objects>
-                <viewController id="76G-yD-TVR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jij-Qj-zo0">
+                <viewController id="LmV-Ak-jWv" customClass="HistoryView" customModule="simple_calc_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="965-4Y-5JB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5S-j6-0lY">
-                                <rect key="frame" x="158" y="60" width="58" height="13"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLa-eq-q3d">
+                                <rect key="frame" x="67" y="99" width="240" height="469"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeH-VF-egX">
+                                        <rect key="frame" x="33" y="65" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.50117770110000004" green="0.50955397260000002" blue="0.52318789769999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJG-RZ-7w7">
+                                        <rect key="frame" x="33" y="142" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.50117770110000004" green="0.50955397260000002" blue="0.52318789769999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Q-zH-Lhj">
+                                        <rect key="frame" x="33" y="224" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.50117770110000004" green="0.50955397260000002" blue="0.52318789769999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7l-Yk-xip">
+                                <rect key="frame" x="67" y="51" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50117770110000004" green="0.50955397260000002" blue="0.52318789769999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Go Back">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="goBackButton:" destination="hjq-Xe-jOi" eventType="touchUpInside" id="JRQ-jK-wm7"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="NPR-Jk-fID"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ghR-BT-SYz"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="5E5-ad-F8C"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vRF-UO-rXX"/>
                     </view>
+                    <connections>
+                        <outlet property="history1" destination="CeH-VF-egX" id="D16-wm-PG0"/>
+                        <outlet property="history3" destination="Q9Q-zH-Lhj" id="04Q-Lr-ayz"/>
+                        <outlet property="hsitroy2" destination="pJG-RZ-7w7" id="46E-k9-b1N"/>
+                        <outlet property="scrollHistory" destination="DLa-eq-q3d" id="dsF-KM-SSv"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wst-10-d1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="hjq-Xe-jOi" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50f-Mf-Vsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845.5999999999999" y="-27.436281859070466"/>
+            <point key="canvasLocation" x="1653.5999999999999" y="-27.436281859070466"/>
         </scene>
     </scenes>
 </document>

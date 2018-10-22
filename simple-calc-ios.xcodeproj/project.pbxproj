@@ -79,7 +79,6 @@
 		58B1C4BA2175A8C900705180 = {
 			isa = PBXGroup;
 			children = (
-				58D940A7217C770000541D50 /* HistoryView.swift */,
 				58B1C4C52175A8C900705180 /* simple-calc-ios */,
 				58B1C4DA2175A8CB00705180 /* simple-calc-iosTests */,
 				58B1C4E52175A8CB00705180 /* simple-calc-iosUITests */,
@@ -100,6 +99,7 @@
 		58B1C4C52175A8C900705180 /* simple-calc-ios */ = {
 			isa = PBXGroup;
 			children = (
+				58D940A7217C770000541D50 /* HistoryView.swift */,
 				58B1C4C62175A8C900705180 /* AppDelegate.swift */,
 				58B1C4C82175A8C900705180 /* ViewController.swift */,
 				58B1C4CA2175A8C900705180 /* Main.storyboard */,

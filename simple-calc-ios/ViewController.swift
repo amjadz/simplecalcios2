@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var averageStorage = [Int]()
     var factorial = [Int]()
     var operation = 0
+    var storeEquation = [String]()
     var math = false
     
     @IBOutlet weak var label: UILabel!
@@ -37,28 +38,35 @@ class ViewController: UIViewController {
 
     }
     
-    
     @IBAction func buttons(_ sender: UIButton) {
     
         if label.text != "" && sender.tag != 11 && sender.tag != 16 {
             averageStorage.append(num)
             factorial.append(num)
+            storeEquation.append(String(num))
             previousSum = Int(label.text!)!
             
             if sender.tag == 12{ // Divide
                 label.text = "/"
+                storeEquation.append("/")
                 
             }
             else if sender.tag == 13{ // Multiply
                 label.text = "x"
+                storeEquation.append("x")
+
                 
             }
             else if sender.tag == 14{ // Subtract
                 label.text = "-"
+                storeEquation.append("-")
+
                 
             }
             else if sender.tag == 15{ // Add
                 label.text = "+"
+                storeEquation.append("+")
+
                 
             }
             else if sender.tag == 17{
@@ -80,15 +88,29 @@ class ViewController: UIViewController {
         else if sender.tag == 16 {
             if operation == 12 {
                 label.text = String(previousSum / num)
+                storeEquation.append(String(previousSum))
+                storeEquation.append("=")
+                storeEquation.append(String(previousSum / num))
+                
             }
             else if operation == 13 {
                 label.text = String(previousSum * num)
+                storeEquation.append(String(previousSum))
+                storeEquation.append("=")
+                storeEquation.append(String(previousSum * num))
             }
             else if operation == 14 {
                 label.text = String(previousSum - num)
+                storeEquation.append(String(previousSum))
+                storeEquation.append("=")
+                storeEquation.append(String(previousSum - num))
             }
             else if operation == 15 {
                 label.text = String(previousSum + num)
+                storeEquation.append(String(previousSum))
+                storeEquation.append("=")
+                storeEquation.append(String(previousSum + num))
+
                 
             }
             else if operation == 17 {
@@ -106,12 +128,13 @@ class ViewController: UIViewController {
 
             }
             else if operation == 19 {
-                var multiply = 1;
+                var multiply = 1
                 
                 for num in 1...factorial[0] {
                     multiply *= num
                 }
                 label.text = String(multiply)
+
             }
         }
         else if sender.tag == 11{
@@ -122,9 +145,18 @@ class ViewController: UIViewController {
             num = 0
             operation = 0
             
+            
         }
+        
+    
+   }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var historyView: HistoryView = segue.destination as! HistoryView
+        
+        historyView.revcevedmath = String(storeEquation)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

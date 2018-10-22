@@ -9,12 +9,30 @@
 import UIKit
 
 class HistoryView: UIViewController {
+    
+    
 
+    @IBOutlet weak var scrollHistory: UIScrollView!
+    
+    @IBOutlet weak var history3: UILabel!
+    
+    var revcevedmath : String = ""
+    
+    @IBOutlet weak var hsitroy2: UILabel!
+    
+    @IBOutlet weak var history1: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        history3.text = revcevedmath
     }
+    
+    
     
 
     /*
